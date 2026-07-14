@@ -4,7 +4,7 @@ Build well-structured cowork plugins quickly through a guided wizard.
 
 ## Live Builder
 
-Use the live app here: https://your-live-app-url.example.com
+Use the live app here: https://victorious-smoke-012ce9c1e.7.azurestaticapps.net/
 
 ## What This Is
 
