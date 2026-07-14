@@ -2,6 +2,13 @@
 
 Build well-structured cowork plugins quickly through a guided wizard.
 
+Cowork Plugin Builder helps teams go from plugin idea to ready-to-export package with less manual setup and fewer formatting errors. It combines guided authoring, built-in validation, and packaging in one flow so you can focus on capabilities instead of file structure.
+
+Key outcomes:
+- Faster plugin authoring with step-by-step guidance
+- Clear validation feedback before export
+- Consistent package output for downstream usage
+
 ## Live Builder
 
 Use the live app here: https://victorious-smoke-012ce9c1e.7.azurestaticapps.net/
@@ -29,10 +36,6 @@ Cowork Plugin Builder is a browser-based tool that helps authors assemble plugin
 - This repository contains only public documentation.
 - The underlying source code is maintained in a private repository.
 - Do not upload secrets in plugin text fields.
-
-## Support
-
-For help, contact: maintainers@example.com
 
 ## Status
 

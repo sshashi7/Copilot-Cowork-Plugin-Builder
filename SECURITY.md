@@ -8,7 +8,7 @@ The product source code, infrastructure code, and deployment internals are hoste
 
 ## Reporting A Vulnerability
 
-Please report vulnerabilities privately to: maintainers@example.com
+Please use GitHub Security Advisories for private vulnerability reporting in this repository.
 
 Include:
 - A clear description of the issue
