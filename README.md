@@ -64,6 +64,7 @@ API-key authentication is present in the v1.28 manifest schema but isn't current
 
 - This repository contains only public documentation.
 - The underlying source code is maintained in a private repository.
+- The live app sends cookie-free operational telemetry for page views, package exports, converter use, and validator use. Events do not include plugin content, text fields, MCP URLs, or URL query strings.
 - Do not upload secrets in plugin text fields.
 - Connector credentials aren't placed in generated manifests or skill files.
 
