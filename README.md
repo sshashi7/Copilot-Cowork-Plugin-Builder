@@ -4,6 +4,11 @@ Build Microsoft Copilot Cowork plugin packages through a guided browser-based wi
 
 Cowork Plugin Builder helps authors create, validate, and export Microsoft 365 app packages for Copilot Cowork without manually assembling every manifest and ZIP entry.
 
+## Live Builder
+
+Use the live app here: https://victorious-smoke-012ce9c1e.7.azurestaticapps.net/
+
+
 ## Current Support
 
 - Microsoft 365 Unified App Manifest v1.28
@@ -15,9 +20,6 @@ Cowork Plugin Builder helps authors create, validate, and export Microsoft 365 a
 - Claude Code, Cursor, and open-plugin import with skill companion files preserved
 - Browser-side ZIP generation and package validation
 
-## Live Builder
-
-Use the live app here: https://victorious-smoke-012ce9c1e.7.azurestaticapps.net/
 
 ## What This Is
 
