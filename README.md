@@ -8,19 +8,6 @@ Cowork Plugin Builder helps authors create, validate, and export Microsoft 365 a
 
 Use the live app here: https://victorious-smoke-012ce9c1e.7.azurestaticapps.net/
 
-
-## Current Support
-
-- Microsoft 365 Unified App Manifest v1.28
-- Skills-only, connector-only, and skills-plus-connector packages
-- Agent Skills using `skills/<name>/SKILL.md`
-- Remote HTTPS MCP connectors
-- MCP tool-description JSON with input schemas and safety annotations
-- Anonymous (`None`) and OAuth (`OAuthPluginVault`) connector authentication
-- Claude Code, Cursor, and open-plugin import with skill companion files preserved
-- Browser-side ZIP generation and package validation
-
-
 ## What This Is
 
 Cowork Plugin Builder is an authoring and validation tool. It generates a ZIP containing the v1.28 manifest, required icons, skills, and connector tool descriptions at the package root.
@@ -43,6 +30,17 @@ The package validator checks manifest fields, skill frontmatter, archive structu
 6. Sideload or publish the ZIP through your supported Microsoft 365 workflow.
 
 For MCP connectors, paste a tool-description document that matches the tools exposed by the server. The generated manifest references `mcp-tools.json`, which exactly matches the root ZIP entry.
+
+## Current Support
+
+- Microsoft 365 Unified App Manifest v1.28
+- Skills-only, connector-only, and skills-plus-connector packages
+- Agent Skills using `skills/<name>/SKILL.md`
+- Remote HTTPS MCP connectors
+- MCP tool-description JSON with input schemas and safety annotations
+- Anonymous (`None`) and OAuth (`OAuthPluginVault`) connector authentication
+- Claude Code, Cursor, and open-plugin import with skill companion files preserved
+- Browser-side ZIP generation and package validation
 
 ## Current Limits
 
