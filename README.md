@@ -29,7 +29,7 @@ The package validator checks manifest fields, skill frontmatter, archive structu
 5. Export the generated package.
 6. Sideload or publish the ZIP through your supported Microsoft 365 workflow.
 
-For MCP connectors, paste a tool-description document that matches the tools exposed by the server. The generated manifest references `mcp-tools.json`, which exactly matches the root ZIP entry.
+For MCP connectors, define tools in the visual builder, import an MCP `tools/list` response, or apply raw tool-description JSON. Every option populates the same visual tool details for review and generates the root-level `mcp-tools.json` referenced by the manifest. Tool names, parameters, schemas, and safety annotations must match the tools exposed by the server.
 
 ## Current Support
 
@@ -37,7 +37,7 @@ For MCP connectors, paste a tool-description document that matches the tools exp
 - Skills-only, connector-only, and skills-plus-connector packages
 - Agent Skills using `skills/<name>/SKILL.md`
 - Remote HTTPS MCP connectors
-- MCP tool-description JSON with input schemas and safety annotations
+- Visual MCP tool authoring, `tools/list` import, and raw JSON editing
 - Anonymous (`None`) and OAuth (`OAuthPluginVault`) connector authentication
 - Claude Code, Cursor, and open-plugin import with skill companion files preserved
 - Browser-side ZIP generation and package validation
