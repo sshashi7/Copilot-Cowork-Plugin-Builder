@@ -56,6 +56,7 @@ API-key authentication is present in the v1.28 manifest schema but isn't current
 
 ## Documentation
 
+- [Step-by-step: Build a DeepWiki-powered Cowork plugin](https://suvidhablogpost.wordpress.com/2026/09/22/build-a-deepwiki-powered-cowork-plugin/) — create a Cowork plugin that combines the DeepWiki Public MCP server with a custom skill.
 - [Build plugins for Copilot Cowork](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-plugin-development)
 - [Microsoft 365 Agents Toolkit CLI](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli)
 - [Configure authentication for MCP and API plugins](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/plugin-authentication)
