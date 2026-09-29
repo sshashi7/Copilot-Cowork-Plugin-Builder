@@ -38,7 +38,7 @@ For MCP connectors, define tools in the visual builder, import an MCP `tools/lis
 - Agent Skills using `skills/<name>/SKILL.md`
 - Remote HTTPS MCP connectors
 - Visual MCP tool authoring, `tools/list` import, and raw JSON editing
-- Anonymous (`None`) and OAuth (`OAuthPluginVault`) connector authentication
+- Anonymous (`None`), OAuth (`OAuthPluginVault`), and Cowork-only Dynamic Client Registration authentication
 - Claude Code, Cursor, and open-plugin import with skill companion files preserved
 - Browser-side ZIP generation and package validation
 
@@ -52,12 +52,15 @@ For MCP connectors, define tools in the visual builder, import an MCP `tools/lis
 - Companion files: 5 MB each and 10 MB total per skill
 - MCP server URLs must use HTTPS
 
-API-key authentication is present in the v1.28 manifest schema but isn't currently supported by Cowork. Use `None` or `OAuthPluginVault` in the builder.
+API-key authentication is present in the v1.28 manifest schema but isn't currently supported by Cowork. Use `None`, `OAuthPluginVault`, or Dynamic Client Registration in the builder.
+
+Cowork can discover MCP tools dynamically through `tools/list`, and current guidance describes `mcpToolDescription` as optional. The live v1.28 schema still requires that property, so the builder continues to package a static tool-description file for schema-valid exports.
 
 ## Documentation
 
 - [Step-by-step: Build a DeepWiki-powered Cowork plugin](https://suvidhablogpost.wordpress.com/2026/09/22/build-a-deepwiki-powered-cowork-plugin/) — create a Cowork plugin that combines the DeepWiki Public MCP server with a custom skill.
 - [Build plugins for Copilot Cowork](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-plugin-development)
+- [Register MCP servers as agent connectors](https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/agent-connectors)
 - [Microsoft 365 Agents Toolkit CLI](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli)
 - [Configure authentication for MCP and API plugins](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/plugin-authentication)
 
