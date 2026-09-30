@@ -24,12 +24,12 @@ The package validator checks manifest fields, skill frontmatter, archive structu
 
 1. Open the live builder link.
 2. Complete each wizard step in order.
-3. Add identity, mode, skills, and connector details.
+3. Add identity, mode, skills, and one or more connectors.
 4. Review preview and validation output.
 5. Export the generated package.
 6. Sideload or publish the ZIP through your supported Microsoft 365 workflow.
 
-For MCP connectors, define tools in the visual builder, import an MCP `tools/list` response, or apply raw tool-description JSON. Every option populates the same visual tool details for review and generates the root-level `mcp-tools.json` referenced by the manifest. Tool names, parameters, schemas, and safety annotations must match the tools exposed by the server.
+For each MCP connector, define tools in the visual builder, import an MCP `tools/list` response, or apply raw tool-description JSON. Every option populates the same visual tool details for review. The first connector generates `mcp-tools.json`; additional connectors generate `mcp-tools-2.json` through `mcp-tools-10.json`. Tool names, parameters, schemas, and safety annotations must match the tools exposed by each server.
 
 ## Current Support
 
@@ -39,7 +39,7 @@ For MCP connectors, define tools in the visual builder, import an MCP `tools/lis
 - Remote HTTPS MCP connectors
 - Visual MCP tool authoring, `tools/list` import, and raw JSON editing
 - Anonymous (`None`), OAuth (`OAuthPluginVault`), and Cowork-only Dynamic Client Registration authentication
-- Claude Code, Cursor, and open-plugin import with skill companion files preserved
+- Claude Code, Cursor, and open-plugin import with skill companion files preserved and up to 10 HTTPS MCP servers imported
 - Browser-side ZIP generation and package validation
 
 ## Current Limits
