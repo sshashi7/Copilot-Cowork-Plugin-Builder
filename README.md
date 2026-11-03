@@ -10,9 +10,9 @@ Use the live app here: https://victorious-smoke-012ce9c1e.7.azurestaticapps.net/
 
 ## What This Is
 
-Cowork Plugin Builder is an authoring and validation tool. It generates a ZIP containing a v1.29 manifest, required icons, and optional skills. Connectors are configured using their HTTPS endpoint, metadata, and authentication; static tool-definition authoring is not required.
+Cowork Plugin Builder is an authoring and validation tool. It generates a ZIP containing a v1.29 manifest, required icons, and optional skills. Connectors are configured using their HTTPS endpoint, metadata, and authentication.
 
-The package validator checks manifest fields, skill frontmatter, archive structure, companion-file limits, connector configuration, exact MCP file paths, tool schemas, and safety annotations.
+The package validator checks the manifest schema, icons, skill frontmatter, archive structure, companion-file limits, and connector configuration.
 
 ## Who It Is For
 
@@ -23,15 +23,16 @@ The package validator checks manifest fields, skill frontmatter, archive structu
 ## How To Use
 
 1. Open the live builder link.
-2. Complete each wizard step in order.
-3. Add identity, mode, skills, and one or more connectors.
-4. Review preview and validation output.
-5. Export the generated package.
-6. Sideload or publish the ZIP through your supported Microsoft 365 workflow.
+2. Enter the plugin identity, app ID, and version.
+3. Choose a skills-only, connectors-only, or combined plugin.
+4. Configure the skills and connectors for your chosen plugin type.
+5. Review the generated files and validation results.
+6. Export the package ZIP.
+7. Sideload or publish the ZIP through your supported Microsoft 365 workflow.
 
-For MCP connectors, supply a real HTTPS endpoint and the authentication settings required by that server. Cowork discovers tools dynamically through `tools/list`. The builder does not include a tool-definition editor or emit tool-description files.
+For MCP connectors, supply a real HTTPS endpoint and the authentication settings required by that server. Cowork discovers tools dynamically through `tools/list` and invokes them on the live server.
 
-Cowork discovers and invokes tools on the live server. Packaged tool definitions do not create tools or change runtime confirmations. A package that passes static validation still needs a successful installation, authentication, and live tool-call test.
+A package that passes static validation still needs a successful installation, authentication, and live tool-call test.
 
 ## Current Support
 
@@ -58,8 +59,6 @@ Cowork discovers and invokes tools on the live server. Packaged tool definitions
 
 API-key authentication is present in the manifest schema but isn't currently supported by Cowork. Use `None`, `OAuthPluginVault`, or Dynamic Client Registration in the builder.
 
-Manifest v1.29 permits an optional `mcpToolDescription`. The ZIP validator checks supplied descriptions, including relative references such as `./mcp-tools.json`, without exposing an authoring editor. Legacy v1.28 uploads receive a clear upgrade message.
-
 Keep the app ID stable across updates and increment the app version. Review conversions in the wizard before exporting; unsupported source features and authentication assumptions are reported rather than silently treated as working.
 
 For workspace file inputs, the server's tool schemas should use `contentEncoding: base64`; Cowork handles encoding outside the model context. Use at most one array file input per tool.
@@ -84,4 +83,4 @@ The builder does not run Microsoft's App Validation Library. For a wiqd project,
 
 ## Status
 
-This project is actively maintained. Documentation alignment was checked on November 3, 2026. The package target is Microsoft 365 Unified App Manifest v1.29.
+This project is actively maintained and targets Microsoft 365 Unified App Manifest v1.29.
